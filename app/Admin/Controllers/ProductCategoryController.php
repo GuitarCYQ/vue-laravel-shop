@@ -45,6 +45,9 @@ class ProductCategoryController extends AdminController
 
         // $grid->column('parent.name', '父分类')->default('顶级分类');
         $grid->column('icon', '分类图标')->display(function () {
+            // 动态获取应用基础URL，从.env的APP_URL配置，本地是larabbs.test 线上是服务器
+            $appBaseUrl = config('app.url');
+            #
             $icon =  $this->getImageUrlAttribute();
 
             if($icon == 'http://larabbs.test/storage/') {

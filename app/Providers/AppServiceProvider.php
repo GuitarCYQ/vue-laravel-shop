@@ -17,9 +17,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if (app()->isLocal()) {
-            $this->app->register(\VIACreative\SudoSu\ServiceProvider::class);
-        }
+        // if (app()->isLocal()) {
+        //     $this->app->register(\VIACreative\SudoSu\ServiceProvider::class);
+        // }
 
         $config = config('pay');
         //判断当前项目运行环境是否为线上环境
