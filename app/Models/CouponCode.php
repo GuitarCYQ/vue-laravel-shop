@@ -72,4 +72,6 @@ class CouponCode extends Model
 
         return $str . '减' . str_replace('.00', '', $this->value);
     }
+
+
 }
